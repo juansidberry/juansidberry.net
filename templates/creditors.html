@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creditors</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <h2>Creditors</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Amount Owed</th>
+            <th>Minimum Payment</th>
+        </tr>
+        {% for creditor in creditors %}
+        <tr>
+            <td>{{ creditor.name }}</td>
+            <td>${{ creditor.amount_owed }}</td>
+            <td>${{ creditor.minimum_payment }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

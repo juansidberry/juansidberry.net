@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt Accelerator Plan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <h2>Debt Accelerator Plan</h2>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Acceleration Amount</th>
+            {% for creditor in creditors %}
+            <th>{{ creditor.name }} Payment Amount</th>
+            <th>{{ creditor.name }} Balance</th>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td></td> <!-- Date is blank as specified -->
+            <td></td> <!-- Acceleration Amount can be added here -->
+            {% for creditor in creditors %}
+            <td>${{ creditor.payment_amount }}</td>
+            <td>${{ creditor.balance }}</td>
+            {% endfor %}
+        </tr>
+        <!-- More rows can be added here as needed -->
+    </table>
+</body>
+</html>

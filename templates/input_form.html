@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Debt</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <h1>Add a New Debt</h1>
+    <form method="post">
+        <label for="creditor_name">Creditor Name:</label>
+        <input type="text" id="creditor_name" name="creditor_name" required><br>
+
+        <label for="type_of_credit">Type of Credit:</label>
+        <input type="text" id="type_of_credit" name="type_of_credit" required><br>
+
+        <label for="total_credit_limit">Total Credit Limit:</label>
+        <input type="number" id="total_credit_limit" name="total_credit_limit" step="0.01" required><br>
+
+        <label for="current_credit_balance">Current Credit Balance:</label>
+        <input type="number" id="current_credit_balance" name="current_credit_balance" step="0.01" required><br>
+
+        <label for="interest_rate">Interest Rate (%):</label>
+        <input type="number" id="interest_rate" name="interest_rate" step="0.01" required><br>
+
+        <label for="minimum_monthly_payment">Minimum Monthly Payment:</label>
+        <input type="number" id="minimum_monthly_payment" name="minimum_monthly_payment" step="0.01" required><br>
+
+        <button type="submit">Add Debt</button>
+    </form>
+</body>
+</html>
+
