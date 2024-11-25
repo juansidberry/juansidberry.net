@@ -76,7 +76,7 @@ def home():
 </head>
 <body>
     <div class="content">
-        <h1>Debt Elimination Calculator</h1>
+        <h1>Juan Sidberry</h1>
     </div>
 </body>
 </html>
